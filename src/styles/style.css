@@ -1,9 +1,13 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
+  
 }
+
 
 body{
     height: 100vh;
+    transition: .2s;
+    background: linear-gradient(180deg, rgb(173, 173, 173), rgb(241, 241, 241));
 }
 
 .content{
@@ -22,8 +26,8 @@ body{
     background-color: black;
     border-radius: 20px;
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 10px;
+    right: 20px;
 }
 
 .indicador{
@@ -38,20 +42,29 @@ body{
 }
 
 
+.creditos, .relogio{
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.288);
+}
+
 .content .relogio{
     font-size: 10rem;
 }
 
 
 .content p span{
-    color: rgb(23, 80, 155);
+    color: rgb(0, 0, 0);
     font-weight: 600;
+    transition: .2s;
 }
 
 /* Modo dark */
 
 body.dark{
-    background-color: rgb(19, 19, 19);
+    background: linear-gradient(180deg, rgb(26, 26, 26), rgb(92, 92, 92));
+    color: white;
+}
+
+body.dark span{
     color: white;
 }
 
@@ -64,3 +77,20 @@ body.dark{
     left: 50px;
 }
 
+/* Responsivo */
+
+@media (max-width: 768px){
+    .content .relogio{
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 480px){
+    .content .relogio{
+        font-size: 5rem;
+    }
+
+    .content .creditos{
+        font-size: 15px;
+    }
+}
